@@ -12,22 +12,20 @@ max3 x y z
 
   
 solve :: Float-> Float->Float->[Float]
-solve a b c 
+solve a b c    
      |d < 0     = [] 
-     |otherwise = [(-b+sqrt d) / (2*a),(-b-sqrt d) / (2*a)]
-       where 
-     d = b*b-4*a*c
+     |otherwise = [(-b+sqrt d) / (2*a),(-b-sqrt d) / (2*a)]                     
+	 where
+       d = b*b-4*a*c
 	 
 	 
-f :: Float-> Float-> Float
+f :: Float -> Float -> Float
 f x y 
-   |cube_x > cube_y = cube_x  
-   |otherwise       = cube_y
-   where 
-   cube_x = cube x 
-   cube_y = cube y 
-   cube :: Float-> Float 
-    cube z = z*z*z   
-   
-   
+      |cube_x > cube_y = cube_x  
+      |otherwise    = cube_y
+      where
+      cube_x = cube x     
+      cube_y = cube y 
+      cube :: Float -> Float 
+      cube x = x*x*x    
       
